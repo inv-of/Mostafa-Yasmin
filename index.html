@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mostafa & Yasmin Engagement Invitation</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    overflow:hidden;
+    height:100vh;
+}
+
+/* الخلفية (صفحة المين شغالة طول الوقت) */
+#mainFrame{
+    position:fixed;
+    inset:0;
+    width:100%;
+    height:100%;
+    border:none;
+    z-index:0;
+}
+
+/* الكونتينر بتاع البوابة فوق */
+.gate-container{
+    position:relative;
+    width:100vw;
+    height:100vh;
+    cursor:pointer;
+    overflow:hidden;
+    z-index:2;
+}
+
+/* نصفي الباب */
+.gate-half{
+    position:absolute;
+    top:0;
+    width:50%;
+    height:100%;
+    background-image:url("gate2.jpg");
+    background-size:200% 100%;
+    background-repeat:no-repeat;
+    transition:transform 2s ease-in-out;
+}
+
+/* النصف الشمال */
+.left{
+    left:0;
+    background-position:left center;
+}
+
+/* النصف اليمين */
+.right{
+    right:0;
+    background-position:right center;
+}
+
+/* الحركة */
+.open .left{
+    transform:translateX(-100%);
+}
+
+.open .right{
+    transform:translateX(100%);
+}
+
+/* نخلي البوابة تختفي بعد الفتح */
+.fade-out{
+    opacity:0;
+    transition:opacity 0.5s ease;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- الصفحة الأساسية في الخلفية -->
+<iframe id="mainFrame" src="main.html"></iframe>
+
+<!-- البوابة -->
+<div class="gate-container" id="gate">
+    <div class="gate-half left"></div>
+    <div class="gate-half right"></div>
+</div>
+
+<script>
+const gate = document.getElementById("gate");
+const frame = document.getElementById("mainFrame");
+
+gate.addEventListener("click", () => {
+    gate.classList.add("open");
+
+    setTimeout(() => {
+        gate.classList.add("fade-out");
+        gate.style.pointerEvents = "none";
+
+  
+        frame.contentWindow.postMessage("playMusic", "*");
+
+    }, 2000);
+});
+</script>
+
+</body>
+</html>

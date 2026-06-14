@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Mostafa & Yasmin Engagement Invitation</title>
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;1,200;1,300;1,400&display=swap" rel="stylesheet"><style>
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  background:#F8F5F0;
+  color:#7B5B45;
+  overflow-x:hidden;
+  overflow-y:auto;
+  font-family: 'Nunito', sans-serif;
+font-weight: 300;
+font-style: italic;
+  position:relative;
+}
+
+h1, h2, h3, p, div, span, section {
+  font-weight: 300;
+  font-style: italic;
+}
+/* ================= GENERAL ================= */
+
+section{
+  width:100%;
+  padding:100px 20px;
+  position:relative;
+  z-index:2;
+}
+
+h2{
+  text-align:center;
+  font-size:52px;
+  margin-bottom:25px;
+  color:#3d1700;
+  font-weight:400;
+  letter-spacing:2px;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+  height:100vh;
+  background:
+    linear-gradient(rgba(255,255,255,0.12), rgba(255,255,255,0.12)),
+    url("background2.jpg");
+  background-size:cover;
+  background-position:center;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  overflow:hidden;
+  position:relative;
+}
+
+.hero::before{
+  content:"";
+  position:absolute;
+  width:500px;
+  height:500px;
+  border:1px solid rgba(255,255,255,0.25);
+  border-radius:50%;
+  animation:pulse 6s infinite;
+}
+
+/* ================= COUNTDOWN ================= */
+
+.countdown{
+  background:#F4ECE2;
+  text-align:center;
+  color:#3d1700;
+  position:relative;
+  overflow:hidden;
+}
+
+.h3{
+  color:#3d1700;
+  
+}
+
+.countdown-container{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:25px;
+  margin-top:55px;
+}
+
+.time-box{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+.time{
+  font-size:70px;
+  color:#3d1700;
+  font-weight:400;
+  line-height:1;
+}
+
+.label{
+  margin-top:10px;
+  font-size:16px;
+  letter-spacing:3px;
+  color:#3d1700;
+}
+
+/* ================= LOCATION ================= */
+
+.location{
+  text-align:center;
+  background:#FAF7F2;
+}
+
+.location-text{
+  color:#3d1700;
+  font-size:32px;
+  line-height:2;
+  margin-bottom:40px;
+}
+
+.map{
+  max-width:950px;
+  margin:auto;
+  border-radius:28px;
+  overflow:hidden;
+  border:1px solid rgba(123,91,69,0.08);
+  box-shadow:0 0 30px rgba(0,0,0,0.05);
+}
+
+iframe{
+  width:100%;
+  height:450px;
+  border:0;
+  pointer-events:none;
+}
+
+
+/* ================= ANIMATION ================= */
+
+@keyframes pulse{
+
+  0%{
+    transform:scale(0.9);
+    opacity:0.25;
+  }
+
+  50%{
+    transform:scale(1);
+    opacity:0.08;
+  }
+
+  100%{
+    transform:scale(1.1);
+    opacity:0;
+  }
+
+}
+
+ 
+/* ================= MOBILE ================= */
+
+@media(max-width:768px){
+
+  .section{
+    padding:70px 18px;
+  }
+
+  .h2{
+    font-size:26px;
+    margin-bottom:18px;
+  }
+
+  .h3{
+    font-size:26px;
+  }
+
+  .countdown-container{
+    gap:18px;
+  }
+
+  .time{
+    font-size:42px;
+  }
+
+  .label{
+    font-size:11px;
+    letter-spacing:2px;
+  }
+
+  .location-text{
+    font-size:22px;
+    line-height:1.8;
+  }
+
+
+  .iframe{
+    height:320px;
+  }
+
+  .signature{
+    font-size:28px !important;
+   
+  }
+ 
+
+}
+
+/* ================= MESSAGE SECTION ================= */
+
+.message-section{
+  background:#F4ECE2;
+  text-align:center;
+}
+
+.message-box{
+  max-width:850px;
+  margin:auto;
+  padding:50px 40px;
+  background:#FFFFFF;
+  border-radius:30px;
+  color:#3d1700;
+  font-size:30px;
+  line-height:2;
+  box-shadow:0 0 30px rgba(0,0,0,0.05);
+  border:1px solid rgba(123,91,69,0.08);
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:768px){
+
+  .message-box{
+    font-size:20px;
+    padding:35px 25px;
+    line-height:1.9;
+  }
+
+}
+
+/* ================= MESSAGE DECOR ================= */
+
+.message-section{
+  background:#F4ECE2;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+}
+
+.message-decor span{
+  position:absolute;
+  bottom:-40px;
+  font-size:30px;
+  opacity:0.7;
+  animation:flowersUp 10s linear infinite;
+}
+.signature{ 
+  margin-top:28px; 
+  font-size:60px;
+  color:#3d1700; }
+
+/* أماكن العناصر */
+
+.message-decor span:nth-child(1){
+  left:8%;
+  animation-duration:9s;
+}
+
+.message-decor span:nth-child(2){
+  left:24%;
+  animation-duration:11s;
+}
+
+.message-decor span:nth-child(3){
+  left:42%;
+  animation-duration:8s;
+}
+
+.message-decor span:nth-child(4){
+  left:60%;
+  animation-duration:12s;
+}
+
+.message-decor span:nth-child(5){
+  left:78%;
+  animation-duration:10s;
+}
+
+.message-decor span:nth-child(6){
+  left:92%;
+  animation-duration:13s;
+}
+
+/* الحركة */
+
+@keyframes flowersUp{
+
+  0%{
+    transform:translateY(0) rotate(0deg);
+    opacity:0;
+  }
+
+  15%{
+    opacity:0.8;
+  }
+
+  100%{
+    transform:translateY(-500px) rotate(360deg);
+    opacity:0;
+  }
+
+}
+
+/* موبايل */
+
+@media(max-width:768px){
+
+  .message-decor span{
+    font-size:22px;
+  }
+
+}
+</style>
+</head>
+
+<body>
+
+<!-- ================= MUSIC ================= -->
+
+<audio id="bgMusic" loop playsinline>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+const music = document.getElementById("bgMusic");
+
+window.addEventListener("message", function(event) {
+    if(event.data === "playMusic"){
+        music.play().catch(() => {});
+    }
+});
+</script>
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+</section>
+
+<!-- ================= COUNTDOWN ================= -->
+
+<section class="countdown">
+  <!-- Flowers & Hearts -->
+  <div class="message-decor">
+    <span>🌹</span>
+    <span>🤎</span>
+    <span>🥀</span>
+    <span>🤎</span>
+    <span>🌸</span>
+    <span>🤎</span>
+  </div>
+
+  <h2 class="h3">Countdown To Our Forever🕊️</h2>
+
+  <div class="countdown-container">
+
+    <div class="time-box">
+      <div class="time" id="days">00:</div>
+      <div class="label">DAYS</div>
+    </div>
+
+    <div class="time-box">
+      <div class="time" id="hours">00:</div>
+      <div class="label">HOURS</div>
+    </div>
+
+    <div class="time-box">
+      <div class="time" id="minutes">00:</div>
+      <div class="label">MINUTES</div>
+    </div>
+
+    <div class="time-box">
+      <div class="time" id="seconds">00</div>
+      <div class="label">SECONDS</div>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ================= LOCATION ================= -->
+
+<section class="location">
+
+  <h2 class="h3">Engagement Venue</h2>
+
+  <div class="location-text">
+    Crowne Plaza Alexandria
+    <br>
+    Mirage📍
+  </div>
+
+  <div class="map">
+
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3412.2041557673183!2d29.946792799999997!3d31.215072799999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f5c5569f53a049%3A0x53e69023a3abed74!2sCrowne%20Plaza%20Alexandria%20Mirage%20by%20IHG!5e0!3m2!1sen!2seg!4v1781460092789!5m2!1sen!2seg" 
+    width="600" 
+    height="450" 
+    style="border:0;" 
+    allowfullscreen="" 
+    loading="lazy" 
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+
+  </div>
+
+  
+</section>
+<!-- ================= INVITATION MESSAGE ================= -->
+
+<section class="message-section">
+
+   <!-- Flowers & Hearts -->
+  <div class="message-decor">
+    <span>🌹</span>
+    <span>🤎</span>
+    <span>🥀</span>
+    <span>🤎</span>
+    <span>🌸</span>
+    <span>🤎</span>
+  </div>
+
+  <h2 class="h3">Invitation</h2>
+
+  <div class="message-box">
+
+    With joyful hearts and endless love, <br>
+
+    We invite you to celebrate the beginning of our forever <br>
+
+    Your presence will make our special day even more meaningful and unforgettable <br>
+
+    We cannot wait to share this beautiful moment with you
+
+    
+
+  </div>
+  <div class="signature"> Mostafa & Yasmin </div>
+  
+
+</section>
+<!-- ================= COUNTDOWN SCRIPT ================= -->
+
+<script>
+
+const weddingDate = new Date("June 26, 2026 20:00:00").getTime();
+
+const countdown = setInterval(function(){
+
+  const now = new Date().getTime();
+  const distance = weddingDate - now;
+
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+
+  const hours = Math.floor(
+    (distance % (1000 * 60 * 60 * 24)) /
+    (1000 * 60 * 60)
+  );
+
+  const minutes = Math.floor(
+    (distance % (1000 * 60 * 60)) /
+    (1000 * 60)
+  );
+
+  const seconds = Math.floor(
+    (distance % (1000 * 60)) / 1000
+  );
+
+  document.getElementById("days").innerHTML = days;
+  document.getElementById("hours").innerHTML = hours;
+  document.getElementById("minutes").innerHTML = minutes;
+  document.getElementById("seconds").innerHTML = seconds;
+
+}, 1000);
+
+</script>
+
+<!-- ================= AUTO SCROLL ================= -->
+
+<!--<script>
+
+window.addEventListener("load", () => {
+
+  setTimeout(() => {
+
+    startAutoScroll();
+
+  }, 2000);
+
+});
+
+function startAutoScroll(){
+
+  const auto = setInterval(() => {
+
+    window.scrollBy(0, 1);
+
+    if(
+
+      window.innerHeight + window.pageYOffset >=
+      document.documentElement.scrollHeight - 2
+
+    ){
+
+      clearInterval(auto);
+
+    }
+
+  }, 18);
+
+}
+
+
+</script>-->
+
+</body>
+</html>
